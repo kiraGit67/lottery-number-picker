@@ -3,10 +3,14 @@
 //Variables for Buttons
 const pickNumberButton = document.querySelector("#pick-number-btn");
 const resetButton = document.querySelector("#reset-btn");
+
+//Variable for numbersContainer
 const numbersContainer = document.querySelector(".numbers");
 
+//Variable for Lottery Numbers Array
 const lotteryNumbers = [];
 
+//Event Listener for pickNumberButton
 pickNumberButton.addEventListener("click", function () {
   let randomNumber = pickUniqueNumber();
 
@@ -17,6 +21,7 @@ pickNumberButton.addEventListener("click", function () {
   renderLottoNumbers();
 });
 
+//Function to render Lottery Numbers
 function renderLottoNumbers() {
   numbersContainer.innerHTML = "";
 
@@ -44,3 +49,9 @@ function randomIntFromInterval(min, max) {
   // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
+//Event Listener for Reset Button
+resetButton.addEventListener("click", function () {
+  lotteryNumbers.length = 0;
+  renderLottoNumbers();
+});
