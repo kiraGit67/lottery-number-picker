@@ -1,6 +1,7 @@
 "use strict";
 
-import { randomIntFromInterval } from "./random-int-from-interval.js";
+//import { randomIntFromInterval } from "./random-int-from-interval.js";
+import { pickUniqueNumber, lotteryNumbers } from "./pick-unique-number.js";
 
 //Variables for Buttons
 const pickNumberButton = document.querySelector("#pick-number-btn");
@@ -10,7 +11,7 @@ const resetButton = document.querySelector("#reset-btn");
 const numbersContainer = document.querySelector(".numbers");
 
 //Variable for Lottery Numbers Array
-const lotteryNumbers = [];
+//const lotteryNumbers = [];
 
 //Event Listener for pickNumberButton
 pickNumberButton.addEventListener("click", function () {
@@ -35,7 +36,7 @@ function renderLottoNumbers() {
     numbersContainer.appendChild(numberSpan);
   }
 }
-
+/*
 //Function to generate a unique number
 function pickUniqueNumber() {
   let number = randomIntFromInterval(1, 49);
@@ -47,7 +48,7 @@ function pickUniqueNumber() {
   return number;
 }
 
-/*
+
 //Function to generate a random Number between 1 and 49
 function randomIntFromInterval(min, max) {
   // min and max included
