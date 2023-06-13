@@ -2,6 +2,7 @@
 
 //import { randomIntFromInterval } from "./random-int-from-interval.js";
 import { pickUniqueNumber, lotteryNumbers } from "./pick-unique-number.js";
+import { resetLotteryNumbers } from "./reset-lottery-numbers.js";
 
 //Variables for Buttons
 const pickNumberButton = document.querySelector("#pick-number-btn");
@@ -57,8 +58,11 @@ function randomIntFromInterval(min, max) {
 */
 //Event Listener for Reset Button
 resetButton.addEventListener("click", function () {
+  /*
   if (lotteryNumbers.length === 6) {
     lotteryNumbers.length = 0;
-    renderLottoNumbers();
   }
+  */
+  resetLotteryNumbers(lotteryNumbers);
+  renderLottoNumbers();
 });
