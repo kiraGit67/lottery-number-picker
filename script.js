@@ -53,6 +53,8 @@ function randomIntFromInterval(min, max) {
 
 //Event Listener for Reset Button
 resetButton.addEventListener("click", function () {
-  lotteryNumbers.length = 0;
-  renderLottoNumbers();
+  if (lotteryNumbers.length === 6) {
+    lotteryNumbers.length = 0;
+    renderLottoNumbers();
+  }
 });
