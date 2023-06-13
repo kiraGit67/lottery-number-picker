@@ -86,3 +86,37 @@ h1 {
   border-radius: 100%;
   box-shadow: 5px -5px 15px inset lightgrey;
 }
+
+@media screen and (max-width: 767px) {
+  body {
+    display: unset;
+  }
+
+  main,
+  header {
+    padding: 3rem 2rem;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  main > * + * {
+    margin-top: 2rem;
+  }
+
+  button + button {
+    margin-left: unset;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .numbers {
+    flex-direction: column;
+  }
+}
