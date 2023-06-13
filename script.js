@@ -27,7 +27,7 @@ function renderLottoNumbers() {
 
   for (let number of lotteryNumbers) {
     const numberSpan = document.createElement("span");
-    numberSpan.innerText = number + " ";
+    numberSpan.innerText = number;
     numberSpan.classList.add("number");
 
     numbersContainer.appendChild(numberSpan);
